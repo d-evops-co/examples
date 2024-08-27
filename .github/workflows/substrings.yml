@@ -12,6 +12,8 @@ jobs:
       - name: install pwsh
         if: env.ACT == 'true'
         run: |
+          # If we are running in ACT, we need to install pwsh.
+          
           ###################################
           # Prerequisites
 
