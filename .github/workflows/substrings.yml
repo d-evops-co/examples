@@ -1,0 +1,16 @@
+name: check-substrings
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  chk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: git log
+        shell: pwsh
+        id: glog
+        run: |
+          "$GITHUB_SHA".substring(0,7)
